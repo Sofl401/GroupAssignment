@@ -1,4 +1,4 @@
-package com.example.foodwizard;
+package com.example.cocktailWizard;
 
 import org.junit.Test;
 
