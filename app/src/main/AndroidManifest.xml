@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Framgnet">
-        </activity>    </application>
+        </activity>
+    <activity android:name=".QuizActivity">
+
+    </activity></application>
 
 </manifest>

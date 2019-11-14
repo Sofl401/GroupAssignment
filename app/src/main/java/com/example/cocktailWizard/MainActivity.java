@@ -30,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if (menuItem.getItemId() == R.id.quiz){
-
+                    openQuizActivity();
                 }
                 else if (menuItem.getItemId() == R.id.random){
                     //swapFragment(randomFragment);
-                    openActivity();
+                    openActivity1();
                 }
                 return true;
             }
@@ -48,8 +48,12 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.fragmentSlot, fragment);
         fragmentTransaction.commit();
     }
-    private void openActivity(){
+    private void openActivity1(){
         Intent intent = new Intent(this, Framgnet.class);
+        startActivity(intent);
+    }
+    private void openQuizActivity(){
+        Intent intent = new Intent(this, QuizActivity.class);
         startActivity(intent);
     }
 
