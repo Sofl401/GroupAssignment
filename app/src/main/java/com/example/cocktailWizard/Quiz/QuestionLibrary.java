@@ -1,4 +1,4 @@
-package com.example.cocktailWizard;
+package com.example.cocktailWizard.Quiz;
 
 public class QuestionLibrary {
 
