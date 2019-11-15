@@ -34,11 +34,11 @@
     <TextView
         android:id="@+id/question"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="101dp"
         android:layout_marginBottom="40dp"
         android:padding="8dp"
         android:text="Which thing is alive?"
-        android:textSize="20sp" />
+        android:textSize="16sp" />
 
 
     <Button
