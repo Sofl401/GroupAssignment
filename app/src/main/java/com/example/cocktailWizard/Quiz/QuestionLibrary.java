@@ -28,6 +28,8 @@ public class QuestionLibrary {
             "This old time drink was named after a popular cowboy, made with cola and a splash of Grenadine. What is it?",
             "This drink is made by mixing tomato juice with the juice of clams. What is it?",
             "A 'Creamsicle' drink is made with ice cream and what?",
+            "White Lady is made of 3 ingredients. Which one of the following is not its ingredient?",
+            "The difference between a White Russian and a Black Russian is that a White Russian contains cream/milk."
 
 
     };
@@ -38,27 +40,29 @@ public class QuestionLibrary {
             {"Bellini", "Manhattan", "Negroni"},
             {"Daiquiri", "Tom Collins", "Sidecar"},
             {"Gimlet", "Sazerac", "Mojito"},
-            {"Daiquiri, Old Faishoned, Gimlet"}, //gimlet
-            {"Americano, Martinez, Negroni"}, //negroni
-            {"Sazerac, Bee's Knees, Pisco Sour"}, //Sazerac
-            {"Gin Fizz, French 75, Americano"}, //French75
-            {"More Gin, Olives, Lime"}, //olives
-            {"Gin, Lime Juice, Tonic Water"},//tonicwater
-            {"3 ounces, 5 ounces, 7 ounces"}, //5ounces
-            {"New York, London, Paris"},//paris
-            {"Coffee, Ice, Gin"}, //gin
-            {"Apple Juice, Lime Juice, Orange Juice"}, //limejuice
-            {"Apple Juice, Cranberry Juice, Kiwi Juice"}, //cranberryjuice
-            {"Pepper, Vodka, Pineapple Juice"}, //pineapplejuice
-            {"Orgeat Syrup, Salt, Lime Juice"}, //orgeatsyrup
-            {"Pepper, Lime Juice, Ginger Beer"}, //limejuice
-            {"Tequilla, Rum, Peach Schnapps"}, //peachschnapps
-            {"WKD, Vimto, Blue Curacao"}, //bluecuracao
-            {"Shirley Temple, Shelley Winters, Shirley Baines"}, //shirleytemple
-            {"Kiddie Cherry, Kiddie Kocktail, Kiddie Sangria"}, //kiddiekocktail
-            {"Clint Eastwood, Roy Rogers, John Wayne"}, //royrogers
-            {"Clamato, Tomaclam, Disgusting"}, //clamato
-            {"Strawberries, Grapefruit Juice, Milk"}, //grapefruitjuice
+            {"Daiquiri", "Old Faishoned", "Gimlet"}, //gimlet
+            {"Americano", "Martinez", "Negroni"}, //negroni
+            {"Sazerac", "Bee's Knees", "Pisco Sour"}, //Sazerac
+            {"Gin Fizz", "French 75", "Americano"}, //French75
+            {"More Gin", "Olives", "Lime"}, //olives
+            {"Gin", "Lime Juice", "Tonic Water"},//tonicwater
+            {"3 ounces", "5 ounces", "7 ounces"}, //5ounces
+            {"New York", "London", "Paris"},//paris
+            {"Coffee", "Ice", "Gin"}, //gin
+            {"Apple Juice", "Lime Juice", "Orange Juice"}, //limejuice
+            {"Apple Juice", "Cranberry Juice", "Kiwi Juice"}, //cranberryjuice
+            {"Pepper", "Vodka", "Pineapple Juice"}, //pineapplejuice
+            {"Orgeat Syrup", "Salt", "Lime Juice"}, //orgeatsyrup
+            {"Pepper", "Lime Juice", "Ginger Beer"}, //limejuice
+            {"Tequilla", "Rum", "Peach Schnapps"}, //peachschnapps
+            {"WKD", "Vimto", "Blue Curacao"}, //bluecuracao
+            {"Shirley Temple", "Shelley Winters", "Shirley Baines"}, //shirleytemple
+            {"Kiddie Cherry", "Kiddie Kocktail", "Kiddie Sangria"}, //kiddiekocktail
+            {"Clint Eastwood", "Roy Rogers", "John Wayne"}, //royrogers
+            {"Clamato", "Tomaclam", "Disgusting"}, //clamato
+            {"Strawberries", "Grapefruit Juice", "Milk"}, //grapefruitjuice
+            {"Gin", "Lemon Juice", "Brandy"},
+            {"True", "False", "Both have milk"}
 
 
     };
@@ -66,7 +70,7 @@ public class QuestionLibrary {
 
 
     private String mCorrectAnswers[] = {"Margarita", "Manhattan", "Daiquiri", "Mojito", "Gimlet", "Negroni", "Sazerac", "French 75", "Olives", "Tonic Water", "5 ounces", "Paris", "Gin", "Lime Juice", "Cranberry Juice", "Pineapple Juice", "Orgeat Syrup", "Lime Juice",
-            "Peach Schnapps", "Blue Curacao", "Shirley Temple", "Kiddie Kocktail", "Roy Rogers", "Clamato", "Grapefruit Juice"};
+            "Peach Schnapps", "Blue Curacao", "Shirley Temple", "Kiddie Kocktail", "Roy Rogers", "Clamato", "Grapefruit Juice", "Brandy", "True"};
 
 
 
