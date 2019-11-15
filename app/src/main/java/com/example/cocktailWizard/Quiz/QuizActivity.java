@@ -22,7 +22,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private String mAnswer;
     private int mScore = 0;
-    private int mQuestionNumber;
+    private int mQuestionNumber = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,10 +114,6 @@ public class QuizActivity extends AppCompatActivity {
         mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
         mButtonChoice2.setText(mQuestionLibrary.getChoice2(mQuestionNumber));
         mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
-
-        Random random = new Random();
-        int x = random.nextInt(20);
-        mQuestionNumber = x;
 
         mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber);
         mQuestionNumber++;
