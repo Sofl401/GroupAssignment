@@ -13,8 +13,6 @@ public class QuestionLibrary {
             "Which cocktail requires 1 oz gin, ½ oz simple syrup, ½ oz fresh lemon juice, and champagne?",
             "What turns a plain martini into a dirty martini?",
             "A gimlet requires two specific ingredients. Which of the following is NOT in a gimlet?",
-            "According to mixologist Dale DeGroff, what is the maximum size a cocktail should be?",
-            "Where did the sidecar get its start?",
             "Martini: dry vermouth, a lemon twist and...?",
             "Cuba Libre: rum, coke and...?",
             "Cosmopolitan: vodka, triple sec, lemon, sugar syrup and...?",
@@ -23,11 +21,6 @@ public class QuestionLibrary {
             "Moscow Mule: vodka, sugar syrup, ginger beer and...?",
             "Sex On The Beach: vodka, orange juice, cranberry juice and...?",
             "Blue Lagoon: vodka, lemonade and...?",
-            "This drink is made with ginger-ale and a splash of Grenadine (or a cherry flavoured) syrup. What is it?",
-            "This drink uses Sprite or 7-Up and a splash of Grenadine (or a cherry flavoured) syrup. What is it?",
-            "This old time drink was named after a popular cowboy, made with cola and a splash of Grenadine. What is it?",
-            "This drink is made by mixing tomato juice with the juice of clams. What is it?",
-            "A 'Creamsicle' drink is made with ice cream and what?",
             "White Lady is made of 3 ingredients. Which one of the following is not its ingredient?",
             "The difference between a White Russian and a Black Russian is that a White Russian contains cream/milk."
 
@@ -46,8 +39,6 @@ public class QuestionLibrary {
             {"Gin Fizz", "French 75", "Americano"}, //French75
             {"More Gin", "Olives", "Lime"}, //olives
             {"Gin", "Lime Juice", "Tonic Water"},//tonicwater
-            {"3 ounces", "5 ounces", "7 ounces"}, //5ounces
-            {"New York", "London", "Paris"},//paris
             {"Coffee", "Ice", "Gin"}, //gin
             {"Apple Juice", "Lime Juice", "Orange Juice"}, //limejuice
             {"Apple Juice", "Cranberry Juice", "Kiwi Juice"}, //cranberryjuice
@@ -56,11 +47,6 @@ public class QuestionLibrary {
             {"Pepper", "Lime Juice", "Ginger Beer"}, //limejuice
             {"Tequilla", "Rum", "Peach Schnapps"}, //peachschnapps
             {"WKD", "Vimto", "Blue Curacao"}, //bluecuracao
-            {"Shirley Temple", "Shelley Winters", "Shirley Baines"}, //shirleytemple
-            {"Kiddie Cherry", "Kiddie Kocktail", "Kiddie Sangria"}, //kiddiekocktail
-            {"Clint Eastwood", "Roy Rogers", "John Wayne"}, //royrogers
-            {"Clamato", "Tomaclam", "Disgusting"}, //clamato
-            {"Strawberries", "Grapefruit Juice", "Milk"}, //grapefruitjuice
             {"Gin", "Lemon Juice", "Brandy"},
             {"True", "False", "Both have milk"}
 
@@ -69,8 +55,8 @@ public class QuestionLibrary {
 
 
 
-    private String mCorrectAnswers[] = {"Margarita", "Manhattan", "Daiquiri", "Mojito", "Gimlet", "Negroni", "Sazerac", "French 75", "Olives", "Tonic Water", "5 ounces", "Paris", "Gin", "Lime Juice", "Cranberry Juice", "Pineapple Juice", "Orgeat Syrup", "Lime Juice",
-            "Peach Schnapps", "Blue Curacao", "Shirley Temple", "Kiddie Kocktail", "Roy Rogers", "Clamato", "Grapefruit Juice", "Brandy", "True"};
+    private String mCorrectAnswers[] = {"Margarita", "Manhattan", "Daiquiri", "Mojito", "Gimlet", "Negroni", "Sazerac", "French 75", "Olives", "Tonic Water", "Gin", "Lime Juice", "Cranberry Juice", "Pineapple Juice", "Orgeat Syrup", "Lime Juice",
+            "Peach Schnapps", "Blue Curacao", "Brandy", "True"};
 
 
 

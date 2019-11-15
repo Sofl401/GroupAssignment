@@ -116,7 +116,7 @@ public class QuizActivity extends AppCompatActivity {
         mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
 
         Random random = new Random();
-        int x = random.nextInt(27);
+        int x = random.nextInt(20);
         mQuestionNumber = x;
 
         mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber);
