@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.cocktailWizard.Quiz.QuizActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //final RandomFragment randomFragment = new RandomFragment();
+        final RandomFragment randomFragment = new RandomFragment();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_bar);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -33,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
                     openQuizActivity();
                 }
                 else if (menuItem.getItemId() == R.id.random){
-                    //swapFragment(randomFragment);
-                    openActivity1();
+                    swapFragment(randomFragment);
                 }
                 return true;
             }
@@ -48,10 +48,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.fragmentSlot, fragment);
         fragmentTransaction.commit();
     }
-    private void openActivity1(){
-        Intent intent = new Intent(this, Framgnet.class);
-        startActivity(intent);
-    }
+
     private void openQuizActivity(){
         Intent intent = new Intent(this, QuizActivity.class);
         startActivity(intent);
