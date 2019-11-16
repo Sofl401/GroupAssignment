@@ -22,7 +22,18 @@ public class QuestionLibrary {
             "Sex On The Beach: vodka, orange juice, cranberry juice and...?",
             "Blue Lagoon: vodka, lemonade and...?",
             "White Lady is made of 3 ingredients. Which one of the following is not its ingredient?",
-            "The difference between a White Russian and a Black Russian is that a White Russian contains cream/milk."
+            "The difference between a White Russian and a Black Russian is that a White Russian contains cream/milk.",
+            "What do vodka, Kahlua and milk (or cream) make?",
+            "What do gin, sweet and sour mix and splash of Seven-up(or Sprite) or club soda make?",
+            "What do tequila, orange juice and grenadine make?",
+            "What do rum, tequila, gin, vodka, triple sec, sweet and sour mix and a splash of cola make?",
+            "What do vodka (or gin) and grapefruit juice make?",
+            "What do vodka, triple sec and lime juice make?",
+            "Which drink consists of Bacardi rum, lime juice and grenadine?",
+            "Which drink consists of applejack, lime juice and grenadine?",
+            "Which drink consists of light rum, lime juice and cola?",
+            "Which of these drinks consists of gin, lemon juice, sugar and soda water?"
+
 
 
     };
@@ -48,7 +59,19 @@ public class QuestionLibrary {
             {"Tequilla", "Rum", "Peach Schnapps"}, //peachschnapps
             {"WKD", "Vimto", "Blue Curacao"}, //bluecuracao
             {"Gin", "Lemon Juice", "Brandy"},
-            {"True", "False", "Both have milk"}
+            {"True", "False", "Both have milk"},
+            {"White Russian", "Black Russian", "None"},
+            {"Margarita", "Tom Collins", "French 75"},
+            {"Tequila Sunrise", "Pina Colada", "Greyhound"},
+            {"Long Island Iced Tea", "Whiskey Sour", "Tom Collins"},
+            {"Greyhound", "Screwdriver", "Sea Breeze"},
+            {"Martini", "Kamikaze", "Manhattan"},
+            {"Bacardi Cocktail", "Mai Tai", "Pina Colada"},
+            {"Alexander", "Jack Rose", "Mai Tai"},
+            {"Cuba Libre", "Grasshopper", "Kamikaze"},
+            {"Gimlet", "French 75", "Gin Fizz"}
+
+
 
 
     };
@@ -56,7 +79,7 @@ public class QuestionLibrary {
 
 
     private String mCorrectAnswers[] = {"Margarita", "Manhattan", "Daiquiri", "Mojito", "Gimlet", "Negroni", "Sazerac", "French 75", "Olives", "Tonic Water", "Gin", "Lime Juice", "Cranberry Juice", "Pineapple Juice", "Orgeat Syrup", "Lime Juice",
-            "Peach Schnapps", "Blue Curacao", "Brandy", "True"};
+            "Peach Schnapps", "Blue Curacao", "Brandy", "True", "White Russian", "Tom Collins", "Tequila Sunrise", "Long Island Iced Tea", "Greyhound", "Kamikaze", "Bacardi Cocktail", "Jack Rose", "Cuba Libre", "Gin Fizz"};
 
 
 
