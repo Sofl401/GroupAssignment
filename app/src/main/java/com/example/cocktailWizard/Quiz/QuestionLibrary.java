@@ -7,7 +7,7 @@ public class QuestionLibrary {
             "What do you get when you mix 3 oz rye, 1 oz sweet vermouth, Angostura bitters, and top it with a maraschino cherry?",
             "Which cocktail calls for 2 oz of light rum, 1 oz lime juice, and ½ oz simple syrup?",
             "What drink requires fresh mint leaves, 1 ½ tbsp simple syrup, 1 tbsp fresh lime juice, 2 oz of light rum, and 2 fl oz of club soda?",
-            "What would you call 1 ½ oz gin, 1 oz of sweetened lime juice, and a bit of soda water?",
+            "What would you call 2 oz of Cachaca, limes and 2 tsp sugar?",
             "What drink calls for equal parts Campari, sweet vermouth, and gin?",
             "What needs a sugar cube, some water, 1 ½ oz rye, Peychaud Bitters, Angostura bitters, and absinthe?",
             "Which cocktail requires 1 oz gin, ½ oz simple syrup, ½ oz fresh lemon juice, and champagne?",
@@ -22,7 +22,7 @@ public class QuestionLibrary {
             "Sex On The Beach: vodka, orange juice, cranberry juice and...?",
             "Blue Lagoon: vodka, lemonade and...?",
             "White Lady is made of 3 ingredients. Which one of the following is not its ingredient?",
-            "The difference between a White Russian and a Black Russian is that a White Russian contains cream/milk.",
+            "The difference between a White Russian and a Black Russian is that a Black Russian contains cream/milk.",
             "What do vodka, Kahlua and milk (or cream) make?",
             "What do gin, sweet and sour mix and splash of Seven-up(or Sprite) or club soda make?",
             "What do tequila, orange juice and grenadine make?",
@@ -31,10 +31,8 @@ public class QuestionLibrary {
             "What do vodka, triple sec and lime juice make?",
             "Which drink consists of Bacardi rum, lime juice and grenadine?",
             "Which drink consists of applejack, lime juice and grenadine?",
-            "Which drink consists of light rum, lime juice and cola?",
+            "Which drink consists of Bourbon, sugar and 2 dashes of Angostura Bitters?",
             "Which of these drinks consists of gin, lemon juice, sugar and soda water?"
-
-
 
     };
 
@@ -45,7 +43,7 @@ public class QuestionLibrary {
             {"Bellini", "Manhattan", "Negroni"},
             {"Daiquiri", "Tom Collins", "Sidecar"},
             {"Gimlet", "Sazerac", "Mojito"},
-            {"Daiquiri", "Old Faishoned", "Gimlet"}, //gimlet
+            {"Daiquiri", "Old Faishoned", "Caipirinha"}, //Caipirinha
             {"Americano", "Martinez", "Negroni"}, //negroni
             {"Sazerac", "Bee's Knees", "Pisco Sour"}, //Sazerac
             {"Gin Fizz", "French 75", "Americano"}, //French75
@@ -69,20 +67,20 @@ public class QuestionLibrary {
             {"Martini", "Kamikaze", "Manhattan"},
             {"Bacardi Cocktail", "Mai Tai", "Pina Colada"},
             {"Alexander", "Jack Rose", "Mai Tai"},
-            {"Cuba Libre", "Grasshopper", "Kamikaze"},
+            {"Old Fashioned", "Grasshopper", "Kamikaze"},
             {"Gimlet", "French 75", "Gin Fizz"}
-
-
 
 
     };
 
 
 
-    private String mCorrectAnswers[] = {"Margarita", "Manhattan", "Daiquiri", "Mojito", "Gimlet", "Negroni", "Sazerac", "French 75", "Olives", "Tonic Water", "Gin", "Lime Juice", "Cranberry Juice", "Pineapple Juice", "Orgeat Syrup", "Lime Juice",
-            "Peach Schnapps", "Blue Curacao", "Brandy", "True", "White Russian", "Tom Collins", "Tequila Sunrise", "Long Island Iced Tea", "Greyhound", "Kamikaze", "Bacardi Cocktail", "Jack Rose", "Cuba Libre", "Gin Fizz"};
+    private String mCorrectAnswers[] = {"Margarita", "Manhattan", "Daiquiri", "Mojito", "Caipirinha", "Negroni", "Sazerac", "French 75", "Olives", "Tonic Water", "Gin", "Lime Juice", "Cranberry Juice", "Pineapple Juice", "Orgeat Syrup", "Lime Juice",
+            "Peach Schnapps", "Blue Curacao", "Brandy", "False", "White Russian", "Tom Collins", "Tequila Sunrise", "Long Island Iced Tea", "Greyhound", "Kamikaze", "Bacardi Cocktail", "Jack Rose", "Old Fashioned", "Gin Fizz"};
 
 
+    private String mID[] = {"11007", "11008", "11006", "11000", "11202", "11003", "12127", "17197", "17181", "17255", "11728", "11288", "17196", "17207", "11690", "11009", "12754", "11117", "17194", "11102", "12528", "12402", "13621", "17204", "17252",
+                 "11600", "17183", "11542", "11001", "11410"};
 
 
     public String getQuestion(int a) {
@@ -112,5 +110,9 @@ public class QuestionLibrary {
         return answer;
     }
 
+    public String getID (int a) {
+        String id = mID[a];
+        return id;
+    }
 
 }
