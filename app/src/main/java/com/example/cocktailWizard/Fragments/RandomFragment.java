@@ -1,4 +1,4 @@
-package com.example.cocktailWizard;
+package com.example.cocktailWizard.Fragments;
 
 import android.os.AsyncTask;
 import android.os.Build;
@@ -16,7 +16,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.bumptech.glide.Glide;
+import com.example.cocktailWizard.DrinksApi;
 import com.example.cocktailWizard.Model.Drinks;
+import com.example.cocktailWizard.R;
 import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
@@ -74,9 +76,9 @@ public class RandomFragment extends Fragment {
         protected List<Drinks.Drink> doInBackground(Void... voids) {
             Call<Drinks> RandomCall = service.getRandom();
             try {
-                Response<Drinks> MealResponse = RandomCall.execute();
-                List<Drinks.Drink> myDrink = MealResponse.body().getDrinks();
-                System.out.println(Log.w("2.0 getFeed > Full json res wrapped in pretty printed gson => ", new GsonBuilder().setPrettyPrinting().create().toJson(myDrink)));
+                Response<Drinks> drinkResponse = RandomCall.execute();
+                List<Drinks.Drink> myDrink = drinkResponse.body().getDrinks();
+                //System.out.println(Log.w("2.0 getFeed > Full json res wrapped in pretty printed gson => ", new GsonBuilder().setPrettyPrinting().create().toJson(myDrink)));
                 return myDrink;
             } catch (IOException e) {
                 e.printStackTrace();

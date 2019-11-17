@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.cocktailWizard.Fragments.RandomFragment;
+import com.example.cocktailWizard.Fragments.SearchFragment;
 import com.example.cocktailWizard.Quiz.QuizActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -22,13 +24,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final RandomFragment randomFragment = new RandomFragment();
+        final SearchFragment searchFragment = new SearchFragment();
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_bar);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.search){
-
+                    swapFragment(searchFragment);
                 }
                 else if (menuItem.getItemId() == R.id.quiz){
                     openQuizActivity();

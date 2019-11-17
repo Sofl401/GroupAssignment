@@ -1,4 +1,5 @@
 package com.example.cocktailWizard;
+import com.example.cocktailWizard.Model.Category;
 import com.example.cocktailWizard.Model.Drink;
 import com.example.cocktailWizard.Model.Drinks;
 
@@ -14,5 +15,6 @@ public interface DrinksApi {
     @GET("random.php")
     Call <Drinks> getRandom();
 
-
+    @GET("filter.php?c=")
+    Call <Drinks> getCategoryDrinks();
 }
