@@ -37,7 +37,7 @@ public class SearchFragment extends Fragment {
 
 
         List<String> categories = Arrays.asList("Ordinary Drink", "Cocktail", "Milk / Float / Shake","Cocoa",
-                "Shot", "Coffee", "Homemade Liqueur", "Punch / Party Drink", "Beer", "Soft Drink / Soda", "Other/Unknown");
+                "Shot", "Coffee / Tea", "Homemade Liqueur", "Punch / Party Drink", "Beer", "Soft Drink / Soda", "Other/Unknown");
 
         CategoryAdapter categoryAdapter = new CategoryAdapter();
         categoryAdapter.setData(categories);

@@ -9,14 +9,14 @@ public class Drinks {
 
     @SerializedName("drinks")
     @Expose
-    public List<Drink> drinks = null;
+    public List<Drink> results;
 
     public List<Drink> getDrinks() {
-        return drinks;
+        return results;
     }
 
     public void setDrinks(List<Drink> drinks){
-        this.drinks=drinks;
+        this.results=drinks;
     }
     public class Drink {
 

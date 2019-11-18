@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.cocktailWizard.Activities.CategoryActivity;
+import com.example.cocktailWizard.Activities.SpecificCategoryActivity;
 import com.example.cocktailWizard.R;
 
 import java.util.List;
@@ -39,7 +39,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
-                Intent intent = new Intent(context, CategoryActivity.class);
+                Intent intent = new Intent(context, SpecificCategoryActivity.class);
                 intent.putExtra("category", catPosition);
                 context.startActivity(intent);
             }
