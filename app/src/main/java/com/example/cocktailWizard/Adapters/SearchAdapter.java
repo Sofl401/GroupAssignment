@@ -18,7 +18,8 @@ import com.example.cocktailWizard.R;
 
 import java.util.List;
 
-public class SpecificCategoryAdapter extends RecyclerView.Adapter<SpecificCategoryAdapter.SpecificCategoryViewHolder> {
+public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchViewHolder> {
+
     private List<Drinks.Drink> sDrinks;
 
     public void setData(List<Drinks.Drink> sDrinks){
@@ -27,18 +28,16 @@ public class SpecificCategoryAdapter extends RecyclerView.Adapter<SpecificCatego
 
     @NonNull
     @Override
-    public SpecificCategoryAdapter.SpecificCategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SearchAdapter.SearchViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.search_item_view, parent, false);
-        SpecificCategoryViewHolder sCategoryViewHolder = new SpecificCategoryViewHolder(view);
-        return sCategoryViewHolder;
-
-
+        SearchViewHolder searchViewHolder = new SearchViewHolder(view);
+        return searchViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SpecificCategoryAdapter.SpecificCategoryViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SearchAdapter.SearchViewHolder holder, int position) {
         final Drinks.Drink drinkPos = sDrinks.get(position);
-        holder.category.setText(drinkPos.getStrDrink());
+        holder.textView.setText(drinkPos.getStrDrink());
         String imageUrl = drinkPos.getStrDrinkThumb();
         Glide.with(holder.image.getContext()).load(imageUrl).into(holder.image);
 
@@ -55,20 +54,26 @@ public class SpecificCategoryAdapter extends RecyclerView.Adapter<SpecificCatego
 
     @Override
     public int getItemCount() {
-        return sDrinks.size();
-    }
 
-    public static class SpecificCategoryViewHolder extends RecyclerView.ViewHolder{
-        public View view;
-        public TextView category;
-        public ImageView image;
-
-        public SpecificCategoryViewHolder(View v){
-            super (v);
-            view = v;
-            category = v.findViewById(R.id.searchCat);
-            image = v.findViewById(R.id.imageView);
+        if (sDrinks == null) {
+            return 0;
+        }
+        else {
+            return sDrinks.size();
         }
 
+    }
+
+    public static class SearchViewHolder extends RecyclerView.ViewHolder{
+        public View view;
+        public TextView textView;
+        public ImageView image;
+
+        public SearchViewHolder(@NonNull View v){
+            super(v);
+            view = v;
+            textView = v.findViewById(R.id.searchCat);
+            image = v.findViewById(R.id.imageView);
+        }
     }
 }

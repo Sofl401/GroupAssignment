@@ -17,6 +17,9 @@ public interface DrinksApi {
     @GET("random.php")
     Call <Drinks> getRandom();
 
-    @GET("filter.php")
-    Call <Drinks> getCategoryDrinks(@Query("c") String category);
+    @GET("lookup.php")
+    Call <Drinks> getCocktail(@Query("i") String id);
+
+    @GET("search.php")
+    Call <Drinks> getSearch (@Query("i") String search);
 }
