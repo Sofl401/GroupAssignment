@@ -133,3 +133,4 @@ public class QuizActivity extends AppCompatActivity {
         mScoreView.setText("" + mScore);
     }
 }
+
