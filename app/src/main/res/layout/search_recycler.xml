@@ -10,6 +10,7 @@
         android:id="@+id/results_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#C7ECB3"
         tools:layout_editor_absoluteX="241dp"
         tools:layout_editor_absoluteY="137dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
