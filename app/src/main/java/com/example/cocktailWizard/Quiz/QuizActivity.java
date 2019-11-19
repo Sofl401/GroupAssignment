@@ -6,13 +6,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.util.Random;
 
 import com.example.cocktailWizard.R;
 
 public class QuizActivity extends AppCompatActivity {
 
     private QuestionLibrary mQuestionLibrary = new QuestionLibrary();
+    private RandomSequenceGenerator rsg = new RandomSequenceGenerator();
 
     private TextView mScoreView;
     private TextView mQuestionView;
@@ -111,9 +111,6 @@ public class QuizActivity extends AppCompatActivity {
 
     private void updateQuestion(){
 
-        Random random = new Random();
-        int x = random.nextInt(29);
-        mQuestionNumber = x;
 
         mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
         mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
