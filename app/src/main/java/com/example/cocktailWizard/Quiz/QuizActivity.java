@@ -15,8 +15,9 @@ import com.example.cocktailWizard.R;
 
 public class QuizActivity extends AppCompatActivity {
 
-    public QuestionLibrary mQuestionLibrary = new QuestionLibrary();
+    private QuestionLibrary mQuestionLibrary = new QuestionLibrary();
     private RandomSequenceGenerator rsg = new RandomSequenceGenerator();
+    private final int maxQuesToDisplay = 10;
 
     private TextView mScoreView;
     private TextView mQuestionView;
@@ -27,13 +28,14 @@ public class QuizActivity extends AppCompatActivity {
 
     private String mAnswer;
     private int mScore = 0;
-    private int mQuestionNumber;
+    private int mQuestionNumber = 0;
+    private Integer[] randomSeq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-
+        randomSeq = rsg.getNextRandomSeq(maxQuesToDisplay);
 
         mScoreView = (TextView) findViewById(R.id.score);
         mQuestionView = (TextView)findViewById(R.id.question);
@@ -111,6 +113,7 @@ public class QuizActivity extends AppCompatActivity {
 
         //End of Button Listener for Button3
 
+
         //Start of Button listener for Quit
 
         backBtn.setOnClickListener(new View.OnClickListener() {
@@ -123,35 +126,38 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void updateQuestion(){
+        if(mQuestionNumber < maxQuesToDisplay){
+            int questionIndex = getQuestionIndex();
+            mQuestionView.setText(mQuestionLibrary.getQuestion(questionIndex));
+            mButtonChoice1.setText(mQuestionLibrary.getChoice1(questionIndex));
+            mButtonChoice2.setText(mQuestionLibrary.getChoice2(questionIndex));
+            mButtonChoice3.setText(mQuestionLibrary.getChoice3(questionIndex));
 
-
-        mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
-        mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
-        mButtonChoice2.setText(mQuestionLibrary.getChoice2(mQuestionNumber));
-        mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
-
-        mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber);
-        if (mQuestionNumber < 29) {
+            mAnswer = mQuestionLibrary.getCorrectAnswer(questionIndex);
             mQuestionNumber++;
-        }
-        else {
+        }else{
             Intent intent = new Intent(getApplicationContext(), QuizResult.class);
             String mark = Integer.toString(mScore);
             intent.putExtra("mark", mark);
             startActivity(intent);
-            //start intent
-        }
 
+
+        }
     }
 
+
+    private int getQuestionIndex(){
+        int questionIndex = randomSeq[mQuestionNumber];
+        return questionIndex;
+    }
 
 
     private void updateScore(int point) {
         mScoreView.setText("" + mScore);
     }
+
 }
 

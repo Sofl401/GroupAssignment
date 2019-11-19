@@ -10,15 +10,16 @@ public class RandomSequenceGenerator {
     private final Random random = new Random();
     private final Set<Integer> uniqueSet = new HashSet<>();
 
-    public Integer[] getNextRandomSeq() {
+    public Integer[] getNextRandomSeq(int maxNoOfQuestions) {
         uniqueSet.clear();
-        while(uniqueSet.size() < 10){
-            uniqueSet.add(random.nextInt(29));
+        while(uniqueSet.size() < maxNoOfQuestions){
+            uniqueSet.add(random.nextInt(maxBound));
         }
         Integer arraySize = uniqueSet.size();
         Integer array[] = new Integer[arraySize];
         return uniqueSet.toArray(array);
     }
+
 
 
 }
