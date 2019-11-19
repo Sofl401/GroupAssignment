@@ -28,9 +28,10 @@ public class QuizResult extends AppCompatActivity {
         mFinalScore = (TextView)findViewById(R.id.outOf);
         mRetryButton = (Button)findViewById(R.id.retry);
 
-
-        Bundle bundle = getIntent().getExtras();
-        int score = bundle.getInt("finalScore");
+        Intent intent = getIntent();
+        String mark = intent.getStringExtra("mark");
+        System.out.println(mark);
+        int score = Integer.valueOf(mark);
 
         mFinalScore.setText("You scored " + score + " out of 10");
 

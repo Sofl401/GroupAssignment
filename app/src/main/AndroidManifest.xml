@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Activities.SpecificCategoryActivity" > </activity>
         <activity android:name=".Activities.SearchActivity"></activity>
+        <activity android:name=".Activities.QuizResult"></activity>
         <activity android:name=".Activities.DetailActivityRecycler"></activity>
         <activity android:name="com.example.cocktailWizard.MainActivity">
             <intent-filter>

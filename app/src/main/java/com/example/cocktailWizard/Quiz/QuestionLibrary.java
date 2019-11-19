@@ -79,8 +79,7 @@ public class QuestionLibrary {
             "Peach Schnapps", "Blue Curacao", "Brandy", "False", "White Russian", "Tom Collins", "Tequila Sunrise", "Long Island Iced Tea", "Greyhound", "Kamikaze", "Bacardi Cocktail", "Jack Rose", "Old Fashioned", "Gin Fizz"};
 
 
-    private String mID[] = {"11007", "11008", "11006", "11000", "11202", "11003", "12127", "17197", "17181", "17255", "11728", "11288", "17196", "17207", "11690", "11009", "12754", "11117", "17194", "11102", "12528", "12402", "13621", "17204", "17252",
-                 "11600", "17183", "11542", "11001", "11410"};
+
 
 
     public String getQuestion(int a) {
@@ -110,9 +109,6 @@ public class QuestionLibrary {
         return answer;
     }
 
-    public String getID (int a) {
-        String id = mID[a];
-        return id;
-    }
+
 
 }

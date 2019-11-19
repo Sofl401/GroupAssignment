@@ -9,12 +9,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cocktailWizard.Activities.QuizResult;
 import com.example.cocktailWizard.MainActivity;
 import com.example.cocktailWizard.R;
 
 public class QuizActivity extends AppCompatActivity {
 
-    private QuestionLibrary mQuestionLibrary = new QuestionLibrary();
+    public QuestionLibrary mQuestionLibrary = new QuestionLibrary();
     private RandomSequenceGenerator rsg = new RandomSequenceGenerator();
 
     private TextView mScoreView;
@@ -134,11 +135,18 @@ public class QuizActivity extends AppCompatActivity {
         mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
 
         mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber);
-        mQuestionNumber++;
-
+        if (mQuestionNumber < 29) {
+            mQuestionNumber++;
+        }
+        else {
+            Intent intent = new Intent(getApplicationContext(), QuizResult.class);
+            String mark = Integer.toString(mScore);
+            intent.putExtra("mark", mark);
+            startActivity(intent);
+            //start intent
+        }
 
     }
-
 
 
 

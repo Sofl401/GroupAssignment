@@ -4,19 +4,19 @@
     <item
         android:id="@+id/search"
         android:enabled="true"
-        android:title="TBC"
+        android:title="Search Cocktail"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/quiz"
         android:enabled="true"
-        android:title="TBC"
+        android:title="Quiz Me"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/random"
         android:enabled="true"
-        android:title="Random Food"
+        android:title="Random Cocktail"
         app:showAsAction="ifRoom" />
 
 </menu>
