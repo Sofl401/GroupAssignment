@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.SearchView;
 
+import com.example.cocktailWizard.Fragments.QuizFragment;
 import com.example.cocktailWizard.Fragments.RandomFragment;
 import com.example.cocktailWizard.Fragments.SearchFragment;
 import com.example.cocktailWizard.Quiz.QuizActivity;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         final RandomFragment randomFragment = new RandomFragment();
         final SearchFragment searchFragment = new SearchFragment();
+        final QuizFragment quizFragment = new QuizFragment();
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_bar);
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     swapFragment(searchFragment);
                 }
                 else if (menuItem.getItemId() == R.id.quiz){
-                    openQuizActivity();
+                    swapFragment(quizFragment);
                 }
                 else if (menuItem.getItemId() == R.id.random){
                     swapFragment(randomFragment);
@@ -53,11 +55,6 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragmentSlot, fragment);
         fragmentTransaction.commit();
-    }
-
-    private void openQuizActivity(){
-        Intent intent = new Intent(this, QuizActivity.class);
-        startActivity(intent);
     }
 
 }
