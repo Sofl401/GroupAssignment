@@ -65,8 +65,9 @@ public class QuizResult extends AppCompatActivity {
         ArrayList<Mark> eResults = (ArrayList<Mark>)getIntent().getSerializableExtra("eResults");
 
         for (int i = 0; i < eResults.size(); i++){
-            text.append("\n " + eResults.get(i).getnQuestion() + " " + eResults.get(i).isCorrectA() + " " +
-                    eResults.get(i).getAnswer() + " " + eResults.get(i).getWrong());
+                text.append("\n " + eResults.get(i).getnQuestion() + " " + eResults.get(i).isCorrectA() + " " +
+                        eResults.get(i).getAnswer() + " " + eResults.get(i).getWrong());
+
         }
 
         mRetryButton.setOnClickListener(new View.OnClickListener() {
