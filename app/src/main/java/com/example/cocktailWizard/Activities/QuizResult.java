@@ -77,8 +77,6 @@ public class QuizResult extends AppCompatActivity {
             }
         });
 
-
-
         exitbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

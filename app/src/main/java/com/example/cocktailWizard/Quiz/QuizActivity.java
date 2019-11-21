@@ -34,14 +34,13 @@ public class QuizActivity extends AppCompatActivity {
     private Button backBtn;
 
     private String mAnswer;
-    private int count = 0;
+    private int count = 1;
     private int mScore = 0;
     private int mQuestionNumber = 0;
     private Integer[] randomSeq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        boolean choice;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         eResults = new ArrayList<Mark>();
@@ -54,28 +53,24 @@ public class QuizActivity extends AppCompatActivity {
         mButtonChoice3 = (Button)findViewById(R.id.choice3);
         backBtn = (Button)findViewById(R.id.quit);
 
-        updateQuestion();
-
         //Start of Button Listener for Button1
         mButtonChoice1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 boolean choice;
-
                 if (mButtonChoice1.getText() == mAnswer){
                     mScore = mScore + 1;
                     updateScore(mScore);
-                    updateQuestion();
                     choice = true;
                     Toast.makeText(QuizActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
 
                 }else {
                     Toast.makeText(QuizActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
                     choice = false;
-                    updateQuestion();
                 }
-                count++;
+                updateQuestion();
                 eResults.add(new Mark(count,mAnswer, mButtonChoice1.getText().toString(), choice));
+                count++;
             }
         });
 
@@ -90,17 +85,16 @@ public class QuizActivity extends AppCompatActivity {
                 if (mButtonChoice2.getText() == mAnswer){
                     mScore = mScore + 1;
                     updateScore(mScore);
-                    updateQuestion();
                     Toast.makeText(QuizActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
                     choice = true;
 
                 }else {
                     Toast.makeText(QuizActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
                     choice = false;
-                    updateQuestion();
                 }
-                count++;
+                updateQuestion();
                 eResults.add(new Mark(count,mAnswer, mButtonChoice2.getText().toString(), choice));
+                count++;
 
             }
         });
@@ -117,17 +111,16 @@ public class QuizActivity extends AppCompatActivity {
                 if (mButtonChoice3.getText() == mAnswer){
                     mScore = mScore + 1;
                     updateScore(mScore);
-                    updateQuestion();
                     choice = true;
                     Toast.makeText(QuizActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
 
                 }else {
                     Toast.makeText(QuizActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
                     choice = false;
-                    updateQuestion();
                 }
-                count++;
+                updateQuestion();
                 eResults.add(new Mark(count,mAnswer, mButtonChoice3.getText().toString(),choice));
+                count++;
             }
         });
 
@@ -181,11 +174,6 @@ public class QuizActivity extends AppCompatActivity {
 
     private void updateScore(int point) {
         mScoreView.setText("" + mScore);
-    }
-    private void printData(){
-        for (int i = 0; i < eResults.size(); i++){
-            System.out.println(eResults.get(i).getnQuestion());
-        }
     }
 
 
