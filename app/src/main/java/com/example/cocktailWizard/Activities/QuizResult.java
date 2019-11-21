@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.cocktailWizard.MainActivity;
 import com.example.cocktailWizard.Quiz.QuestionLibrary;
 import com.example.cocktailWizard.Quiz.QuizActivity;
 import com.example.cocktailWizard.R;
@@ -18,6 +19,7 @@ public class QuizResult extends AppCompatActivity {
     TextView mGrade;
     TextView mFinalScore;
     Button mRetryButton;
+    Button exitbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class QuizResult extends AppCompatActivity {
         mGrade = (TextView)findViewById(R.id.grade);
         mFinalScore = (TextView)findViewById(R.id.outOf);
         mRetryButton = (Button)findViewById(R.id.retry);
+        exitbutton = (Button) findViewById(R.id.exitbtn);
 
         Intent intent = getIntent();
         String mark = intent.getStringExtra("mark");
@@ -55,7 +58,12 @@ public class QuizResult extends AppCompatActivity {
 
 
 
-
+        exitbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(QuizResult.this, MainActivity.class));
+            }
+        });
 
 
 

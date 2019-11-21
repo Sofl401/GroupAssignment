@@ -57,10 +57,10 @@ public class QuizActivity extends AppCompatActivity {
                     updateScore(mScore);
                     updateQuestion();
                     //This line of code is optional
-                    Toast.makeText(QuizActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    Toast.makeText(QuizActivity.this, "wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 }
             }
@@ -79,10 +79,10 @@ public class QuizActivity extends AppCompatActivity {
                     updateScore(mScore);
                     updateQuestion();
                     //This line of code is optional
-                    Toast.makeText(QuizActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    Toast.makeText(QuizActivity.this, "wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizActivity.this, "Wrong", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 }
             }
@@ -102,10 +102,10 @@ public class QuizActivity extends AppCompatActivity {
                     updateScore(mScore);
                     updateQuestion();
                     //This line of code is optional
-                    Toast.makeText(QuizActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    Toast.makeText(QuizActivity.this, "wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 }
             }
@@ -144,6 +144,7 @@ public class QuizActivity extends AppCompatActivity {
             intent.putExtra("mark", mark);
             startActivity(intent);
 
+            QuizActivity.this.finish();
 
         }
     }
