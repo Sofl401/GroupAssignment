@@ -1,7 +1,6 @@
 package com.example.cocktailWizard.Fragments;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,17 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cocktailWizard.Activities.SearchActivity;
 import com.example.cocktailWizard.Adapters.CategoryAdapter;
-import com.example.cocktailWizard.DrinksApi;
-import com.example.cocktailWizard.Model.Category;
 import com.example.cocktailWizard.R;
 
 import java.util.Arrays;
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SearchFragment extends Fragment {
     private RecyclerView recyclerView;

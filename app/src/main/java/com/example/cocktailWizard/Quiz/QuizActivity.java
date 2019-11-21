@@ -16,6 +16,8 @@ import com.example.cocktailWizard.R;
 
 import java.util.ArrayList;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
+
 public class QuizActivity extends AppCompatActivity {
     public ArrayList<Mark> eResults;
 
@@ -32,14 +34,17 @@ public class QuizActivity extends AppCompatActivity {
     private Button backBtn;
 
     private String mAnswer;
+    private int count = 0;
     private int mScore = 0;
     private int mQuestionNumber = 0;
     private Integer[] randomSeq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        boolean choice;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        eResults = new ArrayList<Mark>();
         randomSeq = rsg.getNextRandomSeq(maxQuesToDisplay);
 
         mScoreView = (TextView) findViewById(R.id.score);
@@ -55,21 +60,22 @@ public class QuizActivity extends AppCompatActivity {
         mButtonChoice1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
+                boolean choice;
 
                 if (mButtonChoice1.getText() == mAnswer){
                     mScore = mScore + 1;
                     updateScore(mScore);
                     updateQuestion();
-                    //This line of code is optional
+                    choice = true;
                     Toast.makeText(QuizActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
 
                 }else {
                     Toast.makeText(QuizActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
-                    System.out.println(getQuestionIndex() + mAnswer + mButtonChoice1.getText().toString());
-                    eResults.add(new Mark(getQuestionIndex(),mAnswer, mButtonChoice1.getText().toString(), false));
+                    choice = false;
                     updateQuestion();
                 }
+                count++;
+                eResults.add(new Mark(count,mAnswer, mButtonChoice1.getText().toString(), choice));
             }
         });
 
@@ -79,21 +85,23 @@ public class QuizActivity extends AppCompatActivity {
         mButtonChoice2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
+                boolean choice;
 
                 if (mButtonChoice2.getText() == mAnswer){
                     mScore = mScore + 1;
                     updateScore(mScore);
                     updateQuestion();
-                    //This line of code is optional
                     Toast.makeText(QuizActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                    choice = true;
 
                 }else {
-                    Toast.makeText(QuizActivity.this, "Wrong", Toast.LENGTH_SHORT).show();
-                    System.out.println(getQuestionIndex() + mAnswer + mButtonChoice2.getText().toString());
-                    eResults.add(new Mark(getQuestionIndex(),mAnswer, mButtonChoice2.getText().toString(), false));
+                    Toast.makeText(QuizActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
+                    choice = false;
                     updateQuestion();
                 }
+                count++;
+                eResults.add(new Mark(count,mAnswer, mButtonChoice2.getText().toString(), choice));
+
             }
         });
 
@@ -104,21 +112,22 @@ public class QuizActivity extends AppCompatActivity {
         mButtonChoice3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
+                boolean choice;
 
                 if (mButtonChoice3.getText() == mAnswer){
                     mScore = mScore + 1;
                     updateScore(mScore);
                     updateQuestion();
-                    //This line of code is optional
+                    choice = true;
                     Toast.makeText(QuizActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
 
                 }else {
                     Toast.makeText(QuizActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
-                    System.out.println(getQuestionIndex() + mAnswer + mButtonChoice3.getText().toString());
-                    eResults.add(new Mark(getQuestionIndex(),mAnswer, mButtonChoice3.getText().toString(), false));
+                    choice = false;
                     updateQuestion();
                 }
+                count++;
+                eResults.add(new Mark(count,mAnswer, mButtonChoice3.getText().toString(),choice));
             }
         });
 
@@ -151,11 +160,14 @@ public class QuizActivity extends AppCompatActivity {
             mQuestionNumber++;
         }else{
             Intent intent = new Intent(getApplicationContext(), QuizResult.class);
+            QuizResult quizResult = new QuizResult();
+            quizResult.setData(eResults);
+            intent.putExtra("eResults", eResults);
             String mark = Integer.toString(mScore);
             intent.putExtra("mark", mark);
             startActivity(intent);
 
-            QuizActivity.this.finish();
+
 
         }
     }
@@ -170,8 +182,13 @@ public class QuizActivity extends AppCompatActivity {
     private void updateScore(int point) {
         mScoreView.setText("" + mScore);
     }
-    public ArrayList<Mark> setData(){
-        return this.eResults;
+    private void printData(){
+        for (int i = 0; i < eResults.size(); i++){
+            System.out.println(eResults.get(i).getnQuestion());
+        }
     }
+
+
+
 }
 

@@ -24,11 +24,15 @@ public class QuizResult extends AppCompatActivity {
     Button mRetryButton;
     Button exitbutton;
     TextView text;
+    public ArrayList<Mark> eResults;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_result);
+
+        eResults = new ArrayList<Mark>();
 
         mGrade = (TextView)findViewById(R.id.grade);
         mFinalScore = (TextView)findViewById(R.id.outOf);
@@ -36,10 +40,8 @@ public class QuizResult extends AppCompatActivity {
         exitbutton = (Button) findViewById(R.id.exitbtn);
         text = findViewById(R.id.answers);
 
-
         Intent intent = getIntent();
         String mark = intent.getStringExtra("mark");
-        System.out.println(mark);
         int score = Integer.valueOf(mark);
 
 
@@ -57,10 +59,10 @@ public class QuizResult extends AppCompatActivity {
         }
 
         text.setText(" ");
-        ArrayList<Mark> eResults = new ArrayList<Mark>();
-        QuizActivity qActivity = new QuizActivity();
 
-        eResults = qActivity.setData();
+        System.out.println(eResults.isEmpty());
+
+        ArrayList<Mark> eResults = (ArrayList<Mark>)getIntent().getSerializableExtra("eResults");
 
         for (int i = 0; i < eResults.size(); i++){
             text.append("\n " + eResults.get(i).getnQuestion() + " " + eResults.get(i).isCorrectA() + " " +
@@ -86,6 +88,9 @@ public class QuizResult extends AppCompatActivity {
 
 
 
+    }
+    public void setData(ArrayList<Mark> eResults){
+        this.eResults = eResults;
     }
 
 }

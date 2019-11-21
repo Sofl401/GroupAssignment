@@ -1,6 +1,6 @@
 package com.example.cocktailWizard.Model;
 
-public class Mark {
+public class Mark implements java.io.Serializable {
     int nQuestion;
     String answer;
     String wrong;
