@@ -11,9 +11,14 @@ import android.widget.Toast;
 
 import com.example.cocktailWizard.Activities.QuizResult;
 import com.example.cocktailWizard.MainActivity;
+import com.example.cocktailWizard.Model.Mark;
 import com.example.cocktailWizard.R;
 
+import java.util.ArrayList;
+
 public class QuizActivity extends AppCompatActivity {
+    public ArrayList<Mark> eResults;
+
 
     private QuestionLibrary mQuestionLibrary = new QuestionLibrary();
     private RandomSequenceGenerator rsg = new RandomSequenceGenerator();
@@ -61,6 +66,8 @@ public class QuizActivity extends AppCompatActivity {
 
                 }else {
                     Toast.makeText(QuizActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
+                    System.out.println(getQuestionIndex() + mAnswer + mButtonChoice1.getText().toString());
+                    eResults.add(new Mark(getQuestionIndex(),mAnswer, mButtonChoice1.getText().toString(), false));
                     updateQuestion();
                 }
             }
@@ -83,6 +90,8 @@ public class QuizActivity extends AppCompatActivity {
 
                 }else {
                     Toast.makeText(QuizActivity.this, "Wrong", Toast.LENGTH_SHORT).show();
+                    System.out.println(getQuestionIndex() + mAnswer + mButtonChoice2.getText().toString());
+                    eResults.add(new Mark(getQuestionIndex(),mAnswer, mButtonChoice2.getText().toString(), false));
                     updateQuestion();
                 }
             }
@@ -106,6 +115,8 @@ public class QuizActivity extends AppCompatActivity {
 
                 }else {
                     Toast.makeText(QuizActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
+                    System.out.println(getQuestionIndex() + mAnswer + mButtonChoice3.getText().toString());
+                    eResults.add(new Mark(getQuestionIndex(),mAnswer, mButtonChoice3.getText().toString(), false));
                     updateQuestion();
                 }
             }
@@ -159,6 +170,8 @@ public class QuizActivity extends AppCompatActivity {
     private void updateScore(int point) {
         mScoreView.setText("" + mScore);
     }
-
+    public ArrayList<Mark> setData(){
+        return this.eResults;
+    }
 }
 
