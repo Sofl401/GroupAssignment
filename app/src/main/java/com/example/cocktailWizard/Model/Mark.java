@@ -1,5 +1,7 @@
 package com.example.cocktailWizard.Model;
 
+// Created solely to pass marks through to the quizResult screen
+// Code partially taken from https://stackoverflow.com/questions/21250339/how-to-pass-arraylistcustomeobject-from-one-activity-to-another to implement serializable
 public class Mark implements java.io.Serializable {
     int nQuestion;
     String answer;

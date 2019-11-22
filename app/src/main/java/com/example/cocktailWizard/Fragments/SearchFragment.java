@@ -19,19 +19,19 @@ import com.example.cocktailWizard.R;
 import java.util.Arrays;
 import java.util.List;
 
+// SearchView code taken from https://www.youtube.com/watch?v=sJ-Z9G0SDhc and adapted
+
 public class SearchFragment extends Fragment {
     private RecyclerView recyclerView;
     private SearchView searchView;
 
-
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // add r.id.textviews/buttons etc.
         View view = inflater.inflate(R.layout.categories_rv, container, false);
         recyclerView = view.findViewById(R.id.catRv);
         LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         recyclerView.setLayoutManager(layoutManager);
 
-
+        // hardcoded list of string's because API does not produce objects
         List<String> categories = Arrays.asList("Ordinary Drink", "Cocktail", "Milk / Float / Shake","Cocoa",
                 "Shot", "Coffee / Tea", "Homemade Liqueur", "Punch / Party Drink", "Beer", "Soft Drink / Soda", "Other/Unknown");
 
@@ -60,8 +60,6 @@ public class SearchFragment extends Fragment {
         intent.putExtra("query", query);
         startActivity(intent);
     }
-    //setup Async/Adapters
-
 
 }
 

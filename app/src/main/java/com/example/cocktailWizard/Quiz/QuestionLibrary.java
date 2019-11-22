@@ -1,5 +1,6 @@
 package com.example.cocktailWizard.Quiz;
 
+//Database for questions
 public class QuestionLibrary {
 
     private String mQuestions [] = {

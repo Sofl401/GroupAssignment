@@ -4,20 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.QuickContactBadge;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cocktailWizard.MainActivity;
 import com.example.cocktailWizard.Model.Mark;
-import com.example.cocktailWizard.Quiz.QuestionLibrary;
-import com.example.cocktailWizard.Quiz.QuizActivity;
 import com.example.cocktailWizard.R;
 
 import java.util.ArrayList;
 
-
+// code to pass ArrayList as intent taken from https://stackoverflow.com/questions/21250339/how-to-pass-arraylistcustomeobject-from-one-activity-to-another
+// code to close activity taken from https://stackoverflow.com/questions/15393899/how-to-close-activity-and-go-back-to-previous-activity-in-android
 public class QuizResult extends AppCompatActivity {
     TextView mGrade;
     TextView mFinalScore;
@@ -60,13 +58,18 @@ public class QuizResult extends AppCompatActivity {
 
         text.setText(" ");
 
-        System.out.println(eResults.isEmpty());
-
         ArrayList<Mark> eResults = (ArrayList<Mark>)getIntent().getSerializableExtra("eResults");
-
+        String answer;
+        text.append("Your results for the quiz!");
         for (int i = 0; i < eResults.size(); i++){
-                text.append("\n " + eResults.get(i).getnQuestion() + " " + eResults.get(i).isCorrectA() + " " +
-                        eResults.get(i).getAnswer() + " " + eResults.get(i).getWrong());
+            if (eResults.get(i).isCorrectA()){
+                answer = "Correct: ";
+            }
+            else {
+                answer = "Incorrect: ";
+            }
+                text.append("\n " + eResults.get(i).getnQuestion() + ". " + answer + " " +
+                        eResults.get(i).getAnswer());
 
         }
 

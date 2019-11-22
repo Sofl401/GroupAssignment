@@ -10,8 +10,10 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.cocktailWizard.Quiz.QuizActivity;
+import com.example.cocktailWizard.Activities.QuizActivity;
 import com.example.cocktailWizard.R;
+
+// https://www.youtube.com/watch?v=mcF28h9WiGQ fragment code adapted
 
 public class QuizFragment extends Fragment {
     Button startQuiz;

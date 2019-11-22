@@ -2,9 +2,6 @@ package com.example.cocktailWizard.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,23 +14,17 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.cocktailWizard.Adapters.SearchAdapter;
-import com.example.cocktailWizard.Adapters.SpecificCategoryAdapter;
-import com.example.cocktailWizard.DrinksApi;
 import com.example.cocktailWizard.Model.Drinks;
 import com.example.cocktailWizard.R;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
-import java.util.List;
+// Volley example taken from https://www.youtube.com/watch?v=y2xtLqP8dSQ and adapted
+// https://www.youtube.com/watch?v=KlylC2rgAWM search view fragment example taken from here
+// Searchview with recycler code adapted from https://www.youtube.com/watch?v=sJ-Z9G0SDhc
 
-import retrofit2.Call;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SearchActivity extends AppCompatActivity {
-    private TextView textView;
     private RecyclerView recyclerView;
-    public ImageView image;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +38,6 @@ public class SearchActivity extends AppCompatActivity {
         String search = intent.getStringExtra("query");
         getVolley(search);
 
-
-
     }
     private void getVolley(String search){
         final SearchAdapter searchAdapter = new SearchAdapter();
@@ -60,10 +49,7 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Gson gson = new Gson();
-//                Type listType = new TypeToken<ArrayList<Drink>>(){}.getType();
-//                ArrayList<Drink> results = new Gson().fromJson(response, listType);
                 Drinks drinkList = gson.fromJson(response, Drinks.class);
-                System.out.println(Log.w("2.0 getFeed > Full json res wrapped in pretty printed gson => ", new GsonBuilder().setPrettyPrinting().create().toJson(drinkList)));
                 searchAdapter.setData(drinkList.results);
                 recyclerView.setAdapter(searchAdapter);
                 requestQueue.stop();

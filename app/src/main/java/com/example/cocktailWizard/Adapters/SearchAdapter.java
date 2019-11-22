@@ -18,6 +18,8 @@ import com.example.cocktailWizard.R;
 
 import java.util.List;
 
+// Adapter code mostly adapter from NYT Tutorial Application as well as minor adjustments made https://www.youtube.com/watch?v=E6vE8fqQPTE
+
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchViewHolder> {
 
     private List<Drinks.Drink> sDrinks;

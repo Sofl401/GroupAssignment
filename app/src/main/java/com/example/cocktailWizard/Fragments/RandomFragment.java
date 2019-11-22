@@ -3,7 +3,6 @@ package com.example.cocktailWizard.Fragments;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +18,6 @@ import com.bumptech.glide.Glide;
 import com.example.cocktailWizard.DrinksApi;
 import com.example.cocktailWizard.Model.Drinks;
 import com.example.cocktailWizard.R;
-import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.util.List;
@@ -29,6 +27,10 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+// Code for retrofit taken from https://www.youtube.com/watch?v=4JGvDUlfk7Y and adapted for use.
+// Async example taken from https://www.youtube.com/watch?v=u4828hciA-I and adapted for this application.
+// refresh button taken from https://stackoverflow.com/questions/20702333/refresh-fragment-at-reload
+// Code for appending text taken from https://www.youtube.com/watch?v=a7gxZKW4VkE
 
 public class RandomFragment extends Fragment {
     TextView name;
@@ -38,9 +40,7 @@ public class RandomFragment extends Fragment {
     TextView instructions;
     Button refresh;
 
-
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // add r.id.textviews/buttons etc.
         View view = inflater.inflate(R.layout.random_fragment, container, false);
 
         name = view.findViewById(R.id.name);

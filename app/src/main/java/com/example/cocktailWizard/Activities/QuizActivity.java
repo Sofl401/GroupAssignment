@@ -1,4 +1,4 @@
-package com.example.cocktailWizard.Quiz;
+package com.example.cocktailWizard.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,14 +9,15 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.cocktailWizard.Activities.QuizResult;
 import com.example.cocktailWizard.MainActivity;
 import com.example.cocktailWizard.Model.Mark;
+import com.example.cocktailWizard.Quiz.QuestionLibrary;
+import com.example.cocktailWizard.Quiz.RandomSequenceGenerator;
 import com.example.cocktailWizard.R;
 
 import java.util.ArrayList;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
+// quiz ideas taken from https://www.youtube.com/watch?v=PiCZQg4mhBQ and https://www.youtube.com/watch?v=JA9s_Fntg_4
 
 public class QuizActivity extends AppCompatActivity {
     public ArrayList<Mark> eResults;
@@ -76,9 +77,6 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
-        //End of Button Listener for Button1
-
-        //Start of Button Listener for Button2
         mButtonChoice2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

@@ -15,8 +15,9 @@ import com.bumptech.glide.Glide;
 import com.example.cocktailWizard.Activities.DetailActivityRecycler;
 import com.example.cocktailWizard.Model.Drinks;
 import com.example.cocktailWizard.R;
-
 import java.util.List;
+
+// Adapter code mostly adapter from NYT Tutorial Application as well as minor adjustments made https://www.youtube.com/watch?v=E6vE8fqQPTE
 
 public class SpecificCategoryAdapter extends RecyclerView.Adapter<SpecificCategoryAdapter.SpecificCategoryViewHolder> {
     private List<Drinks.Drink> sDrinks;

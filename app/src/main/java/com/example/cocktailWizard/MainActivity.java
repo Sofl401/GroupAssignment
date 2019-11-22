@@ -5,17 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.SearchView;
 
 import com.example.cocktailWizard.Fragments.QuizFragment;
 import com.example.cocktailWizard.Fragments.RandomFragment;
 import com.example.cocktailWizard.Fragments.SearchFragment;
-import com.example.cocktailWizard.Quiz.QuizActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {

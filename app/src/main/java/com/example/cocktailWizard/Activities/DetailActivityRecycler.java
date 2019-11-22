@@ -2,7 +2,6 @@ package com.example.cocktailWizard.Activities;
 
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.bumptech.glide.Glide;
 import com.example.cocktailWizard.DrinksApi;
@@ -25,6 +23,10 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+// Code for Retrofit taken from https://www.youtube.com/watch?v=4JGvDUlfk7Y&t=8s and adapted
+// Appending textview code https://www.youtube.com/watch?v=a7gxZKW4VkE
+// Async task example https://www.youtube.com/watch?v=uKx0FuVriqA
+
 public class DetailActivityRecycler extends AppCompatActivity {
     TextView name;
     ImageView image;
@@ -33,12 +35,9 @@ public class DetailActivityRecycler extends AppCompatActivity {
     TextView instructions;
     Button refresh;
 
-
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.random_fragment);
-
-
 
         name = findViewById(R.id.name);
         image = findViewById(R.id.ranImage);
@@ -49,6 +48,7 @@ public class DetailActivityRecycler extends AppCompatActivity {
 
         DrinksClass drinksClass = new DrinksClass();
         drinksClass.execute();
+        refresh.setVisibility(View.GONE);
 
     }
     private class DrinksClass extends AsyncTask<Void, Void, List<Drinks.Drink>> {
@@ -78,7 +78,6 @@ public class DetailActivityRecycler extends AppCompatActivity {
                 return null;
             }
         }
-
         @Override
         protected void onPostExecute(List<Drinks.Drink> result) {
             Glide.with(getApplicationContext()).load(result.get(0).getStrDrinkThumb()).into(image);
@@ -170,6 +169,4 @@ public class DetailActivityRecycler extends AppCompatActivity {
         }
     }
 }
-
-// Get the intent that was used to travel to this activity
 

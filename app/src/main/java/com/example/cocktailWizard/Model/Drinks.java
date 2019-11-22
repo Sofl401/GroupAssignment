@@ -5,6 +5,7 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+// Model class generated from http://www.jsonschema2pojo.org/ and the drink class combined within Drinks class for easier access
 public class Drinks {
 
     @SerializedName("drinks")
