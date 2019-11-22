@@ -4,6 +4,7 @@
     android:id="@+id/linearLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background5"
     android:orientation="vertical">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -11,6 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#C7ECB3"
-        tools:layout_editor_absoluteX="241dp"
-        tools:layout_editor_absoluteY="137dp" />
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

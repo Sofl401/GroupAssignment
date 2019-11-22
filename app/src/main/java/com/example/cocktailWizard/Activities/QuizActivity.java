@@ -25,7 +25,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private QuestionLibrary mQuestionLibrary = new QuestionLibrary();
     private RandomSequenceGenerator rsg = new RandomSequenceGenerator();
-    private final int maxQuesToDisplay = 10;
+    private final int maxQuesToDisplay = 11;
 
     private TextView mScoreView;
     private TextView mQuestionView;
