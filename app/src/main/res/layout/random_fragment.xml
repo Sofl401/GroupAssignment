@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#C7ECB3">
+    android:background="@drawable/background3">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -23,10 +23,10 @@
 
             <ImageView
                 android:id="@+id/ranImage"
-                android:layout_width="409dp"
-                android:layout_height="237dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="32dp"
+                android:layout_width="422dp"
+                android:layout_height="263dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@tools:sample/avatars" />
@@ -37,31 +37,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="56dp"
                 android:layout_marginTop="64dp"
+                android:background="#FFFFFF"
                 android:gravity="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ranImage">
 
 
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:text="Loading..."
-                    android:textSize="30sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/ingCard"
-                android:layout_width="150dp"
-                android:layout_height="144dp"
+                android:layout_width="138dp"
+                android:layout_height="179dp"
                 android:layout_marginStart="52dp"
                 android:layout_marginTop="32dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -88,15 +75,16 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Measurements" />
+                    android:text="Measurements"
+                    android:textStyle="bold" />
 
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/measureCard"
-                android:layout_width="150dp"
-                android:layout_height="144dp"
+                android:layout_width="148dp"
+                android:layout_height="179dp"
                 android:layout_marginStart="168dp"
                 android:layout_marginTop="32dp"
                 app:layout_constraintStart_toStartOf="@id/ingCard"
@@ -123,7 +111,8 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Ingredients" />
+                    android:text="Ingredients"
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
 
@@ -144,7 +133,8 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Instructions" />
+                    android:text="Instructions"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/instructions"
@@ -164,8 +154,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="Refresh"
+                android:text="Click Me"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/refresh_btn"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ranImage" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="247dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/to_japan"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ranImage" />
 
 

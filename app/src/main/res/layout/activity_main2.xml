@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome to our Cocktail Application"
+            android:text="Welcome to           Cocktail Master"
             android:textAlignment="center"
             android:fontFamily="@font/to_japan"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"

@@ -98,7 +98,7 @@ public class RandomFragment extends Fragment {
             ingredients.setText(" ");
             measures.setText(" ");
             if (result.get(0).getStrIngredient1() != null) {
-                ingredients.append("\n " + result.get(0).getStrIngredient1());
+                ingredients.append(result.get(0).getStrIngredient1());
             } else {
             }
             if (result.get(0).getStrIngredient2() != null) {
@@ -138,7 +138,7 @@ public class RandomFragment extends Fragment {
             } else {
             }
             if (result.get(0).getStrMeasure1() != null) {
-                measures.append("\n " + result.get(0).getStrMeasure1());
+                measures.append(result.get(0).getStrMeasure1());
             } else {
             }
             if (result.get(0).getStrMeasure2() != null) {

@@ -4,7 +4,7 @@
     android:id="@+id/activity_quiz"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C7ECB3"
+    android:background="@drawable/background4"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -19,6 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:text="Score"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -27,6 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:text="0"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
             android:textSize="20sp" />
 
     </RelativeLayout>
@@ -36,9 +40,12 @@
         android:layout_width="match_parent"
         android:layout_height="101dp"
         android:layout_marginBottom="40dp"
+        android:fontFamily="@font/secular_one"
         android:padding="8dp"
         android:text="Which thing is alive?"
-        android:textSize="16sp" />
+        android:font="@font/secular_one"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 
     <Button

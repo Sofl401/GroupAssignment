@@ -5,18 +5,21 @@
         android:id="@+id/search"
         android:enabled="true"
         android:title="Search Cocktail"
+        android:icon="@drawable/icon_search"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/quiz"
         android:enabled="true"
         android:title="Quiz Me"
+        android:icon="@drawable/ic_bookmark_black_24dp"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/random"
         android:enabled="true"
         android:title="Random Cocktail"
+        android:icon="@drawable/icon_info"
         app:showAsAction="ifRoom" />
 
 </menu>

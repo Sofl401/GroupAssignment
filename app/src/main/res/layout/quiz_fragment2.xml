@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view4"
+        android:id="@+id/upperBg"
         android:layout_width="417dp"
         android:layout_height="684dp"
         android:layout_marginStart="3dp"
@@ -55,12 +55,35 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <View
-        android:id="@+id/view2"
+        android:id="@+id/cocktailPhoto"
         android:layout_width="match_parent"
         android:layout_height="195dp"
         android:background="@drawable/gin_cocktails"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startQuiz" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:text="How it works?"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="325dp"
+        android:layout_height="149dp"
+        android:text='Once you have studied enough using our category and randomiser function, you can test your cocktail memory abilities by playing our cocktail master quiz. You will have to answer 10 questions which are constantly changing each time you play. Your results will be displayed at the end. When your ready please click the "Quiz Me" button. Have fun :)'
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
