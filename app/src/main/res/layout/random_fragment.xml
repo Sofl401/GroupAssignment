@@ -47,8 +47,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/ingCard"
-                android:layout_width="138dp"
-                android:layout_height="179dp"
+                android:layout_width="125dp"
+                android:layout_height="177dp"
                 android:layout_marginStart="52dp"
                 android:layout_marginTop="32dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -56,14 +56,14 @@
 
                 <TextView
                     android:id="@+id/measures"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
                     android:gravity="center_vertical"
-                    android:text="TextView"
+                    android:text="@string/loading"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,23 +83,23 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/measureCard"
-                android:layout_width="148dp"
-                android:layout_height="179dp"
-                android:layout_marginStart="168dp"
+                android:layout_width="182dp"
+                android:layout_height="175dp"
+                android:layout_marginStart="9dp"
                 android:layout_marginTop="32dp"
-                app:layout_constraintStart_toStartOf="@id/ingCard"
+                app:layout_constraintStart_toEndOf="@+id/ingCard"
                 app:layout_constraintTop_toBottomOf="@id/nameCard">
 
                 <TextView
                     android:id="@+id/ing"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
                     android:gravity="center_vertical"
-                    android:text="TextView"
+                    android:text="@string/loading"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/mTitle" />
 
@@ -169,7 +169,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/to_japan"
-                android:text="TextView"
+                android:text="@string/loading"
                 android:textColor="#FFFFFF"
                 android:textSize="22sp"
                 android:textStyle="bold"
